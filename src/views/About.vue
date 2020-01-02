@@ -1,5 +1,27 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+<mapwindow class="half-screen"/>
 </template>
+
+
+<script>
+import mapwindow from '@/components/mapWindow.vue';
+
+export default {
+  name: 'about',
+  components: {
+    mapwindow
+  }
+}
+
+
+
+</script>
+
+<style lang="scss">
+.half-screen{
+  height: 50vh;
+  width: 100vw;
+
+}
+  
+</style>
