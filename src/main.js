@@ -5,11 +5,12 @@ import store from './store'
 import './registerServiceWorker'
 import 'bulma/css/bulma.css';
 import "bulma/bulma.sass";
-import * as VueGoogleMaps from 'vue2-google-maps'
+import * as VueGoogleMaps from 'vue2-google-maps';
+import { token } from "./config-maps-api"
  
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyDUH2iDTgDV1MJC_vdTxFY-tRUTlXxPmuA',
+    key: token.token,
     libraries: 'places', // This is required if you use the Autocomplete plugin
     // OR: libraries: 'places,drawing'
     // OR: libraries: 'places,drawing,visualization'
