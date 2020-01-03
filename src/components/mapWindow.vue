@@ -15,6 +15,7 @@
     @click="center=m.position"
   />
 </GmapMap>
+
 </template>
 
 <script>
@@ -24,7 +25,7 @@ export default {
     this.geolocation();
  },
   methods: {
-    geolocation : function() {
+    geolocation: function() {
       navigator.geolocation.getCurrentPosition((position) => {
         this.currentLocation = {
           lat: position.coords.latitude,

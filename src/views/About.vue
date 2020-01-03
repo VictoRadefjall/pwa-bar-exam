@@ -1,15 +1,22 @@
 <template>
+<div>
+
 <mapwindow class="half-screen"/>
+<places/>
+
+</div>
 </template>
 
 
 <script>
 import mapwindow from '@/components/mapWindow.vue';
+import places from '@/components/placebar.vue';
 
 export default {
   name: 'about',
   components: {
-    mapwindow
+    mapwindow,
+    places
   }
 }
 
