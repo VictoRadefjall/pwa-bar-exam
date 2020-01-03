@@ -64,7 +64,7 @@ export default{
                 color: #F1A624;
                 width: calc(100%/5);
             }
-            .adress{width: calc(100%/5);}
+            .adress{width: calc(100%/5); margin: 15px 0;}
             .openinghrs{width: calc(100%/5);}
             .price{width: calc(100%/5);}
             .button{
@@ -72,6 +72,7 @@ export default{
                 color: white;
                 width: 175px;
                 width: calc(100%/5);
+                cursor: pointer;
                 
             }
         }
