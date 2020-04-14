@@ -1,0 +1,20 @@
+{
+    "name":"Brewster",
+    "short_name":"Brewster",
+    "theme_color":"#4DBA87",
+    "icons": [
+        {
+            "src": "/img/splash.png",
+            "sizes":"192x192",
+            "type":"image/png"
+            },
+        {
+            "src": "/img/splash.png",
+            "sizes":"512x512",
+            "type":"image/png"
+            }
+            ],
+    "start_url" :"/index.html",
+    "display": "standalone",
+    "background_color": "#000000"
+}

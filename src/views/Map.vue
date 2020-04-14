@@ -13,7 +13,7 @@ import mapwindow from '@/components/mapWindow.vue';
 import places from '@/components/placebar.vue';
 
 export default {
-  name: 'about',
+  name: 'map',
   components: {
     mapwindow,
     places

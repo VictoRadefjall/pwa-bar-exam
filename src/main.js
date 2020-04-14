@@ -3,10 +3,14 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
-import 'bulma/css/bulma.css';
-import "bulma/bulma.sass";
+// import 'bulma/css/bulma.css'
+// import "bulma/bulma.sass"
 import * as VueGoogleMaps from 'vue2-google-maps';
 import { token } from "./config-maps-api"
+// import SuiVue from 'semantic-ui-vue';
+
+
+// Vue.use(SuiVue);
  
 Vue.use(VueGoogleMaps, {
   load: {
