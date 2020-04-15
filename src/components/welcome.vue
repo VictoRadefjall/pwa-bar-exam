@@ -10,7 +10,7 @@
         Använd vår Tapp-App och ta ett glas redan nu!
       </p>
       
-      <a class="button" @click="$router.push('/Map')">Hitta nu!</a>
+      <a class="button" @click="$router.push('/CloseBuy')">Hitta nu!</a>
   </div>
   </main>
 </template>

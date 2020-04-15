@@ -3,7 +3,7 @@
     <div id="nav">
       <router-link to="/">Hem</router-link> |
       <router-link to="/Map">Sök</router-link> |
-      <router-link to="/CloseBuy">newMap</router-link>
+      <router-link to="/CloseFind">Hitta lokal</router-link>
     </div>
     <router-view/>
   </div>

@@ -13,9 +13,10 @@
           <div class="two fields">
             <div class="field">
               <select v-model="type">
-                <option value="restaurant">Restaurant</option>
+                <option value="restaurant">Pub</option>
                 <option value="bar">Bar</option>
-                <option value="night_club">Night Club</option>
+                <option value="night_club">Nattklubb</option>
+                <option value="lounge_bar">Lounge</option>
               </select>
             </div>
             <div class="field">
@@ -31,7 +32,7 @@
         <button class="ui button orange" @click="findCloseBuyButtonPressed">Find CloseBuy</button>
       </div>
     </form>
-    <div class="ui segment"  style="max-height:500px;overflow:scroll">
+    <div class="ui segment" style="max-height:500px;overflow:scroll">
     <div class="ui divided items">
         <div class="item" v-for="place in places" :key="place.id">
             <div class="content">
@@ -47,10 +48,10 @@
 </template>
 
 <script>
-/*global google*/ 
 import axios from "axios";
 
 export default {
+    /*global google*/ 
     name :'NewMap',
     data() {
     return {
@@ -84,29 +85,29 @@ methods: {
 		this.places = response.data.results;
 		this.addLocationsToGoogleMaps();
 	});
-},
-addLocationsToGoogleMaps() {
-	var map = new google.maps.Map(this.$refs['map'], {
-		zoom: 15,
-		center: new google.maps.LatLng(this.lat, this.lng),
-		mapTypeId: google.maps.MapTypeId.ROADMAP
-    });
-
-    var infowindow = new google.maps.InfoWindow();
-
-	this.places.forEach((place) => {
-		const lat = place.geometry.location.lat;
-		const lng = place.geometry.location.lng;
-		let marker = new google.maps.Marker({
-			position: new google.maps.LatLng(lat, lng),
-			map: map
+    },
+    addLocationsToGoogleMaps() {
+        var map = new google.maps.Map(this.$refs['map'], {
+            zoom: 15,
+            center: new google.maps.LatLng(this.lat, this.lng),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
         });
-        google.maps.event.addListener(marker, "click", () => {
-        infowindow.setContent(`<div class="ui header">${place.name}</div><p>${place.vicinity}</p>`);
-        infowindow.open(map, marker);
-});
-	});
-}
+
+        var infowindow = new google.maps.InfoWindow();
+
+        this.places.forEach((place) => {
+            const lat = place.geometry.location.lat;
+            const lng = place.geometry.location.lng;
+            let marker = new google.maps.Marker({
+                position: new google.maps.LatLng(lat, lng),
+                map: map
+            });
+            google.maps.event.addListener(marker, "click", () => {
+            infowindow.setContent(`<div class="ui header">${place.name}</div><p>${place.vicinity}</p>`);
+            infowindow.open(map, marker);
+            });
+        });
+    }
 }
 }
 </script>
